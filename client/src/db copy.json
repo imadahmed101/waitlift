@@ -1,0 +1,41 @@
+{
+    "split": [
+        { "name": "Push" },
+        { "name": "Pull" },
+        { "name": "Legs" }
+    ]
+}
+
+// const db = [   
+//         { name: 'Push' },
+//         { name: 'Pull' },
+//         { name: 'Legs' }
+//     ]
+
+
+//     const db1 = [   
+//         { name: 'Neck' },
+//         { name: 'Traps' },
+//         { name: 'Shoulders' },
+//         { name: 'Chest' },
+//         { name: 'Triceps' },
+//         { name: 'Back' },
+//         { name: 'Lats' },
+//         { name: 'Biceps' },
+//         { name: 'Brachiorradialis' },
+//         { name: 'Forearms' },
+//         { name: 'Quads' },
+//         { name: 'Hamstrings' },
+//         { name: 'Glutes' },
+//         { name: 'Calves' }
+//     ]
+
+// const db = {
+//     "split": [   
+//         { name: 'Push' },
+//         { name: 'Pull' },
+//         { name: 'Legs' }
+//     ]
+// }
+
+// export default db
