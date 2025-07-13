@@ -38,4 +38,4 @@ jobs:
 
         ssh-keyscan 69.62.71.214 >> ~/.ssh/known_hosts
 
-        scp -r ./client/build/* deploy@y69.62.71.214:/home/syedimadahmed-waitlift/htdocs/waitlift.syedimadahmed.com
+        scp -r ./client/build/* deploy@69.62.71.214:/home/syedimadahmed-waitlift/htdocs/waitlift.syedimadahmed.com
