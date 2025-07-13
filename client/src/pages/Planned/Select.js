@@ -7,22 +7,22 @@ const Select = () => {
             <p className='text-sm text-gray-600'>Select a workout split or specific muscle group you want to work out.</p>
 
             <div className='flex flex-row gap-2 mb-2'>
-                <p className='bg-blue-600 text-white rounded-full px-4 py-1'>Push</p>
-                <p className='bg-blue-600 text-white rounded-full px-4 py-1'>Pull</p>
-                <p className='bg-blue-600 text-white rounded-full px-4 py-1'>Legs</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Push</p>
+                <p className='bg-white rounded-full px-4 py-1'>Pull</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Legs</p>
             </div>
 
             <div className='flex flex-row gap-2'>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Shoulders</p>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Arms</p>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Chest</p>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Back</p>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Lats</p>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Traps</p>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Abs</p>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Quads</p>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Hams</p>
-                <p className='bg-red-600 text-white rounded-full px-4 py-1'>Calfs</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Shoulders</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Arms</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Chest</p>
+                <p className='bg-white rounded-full px-4 py-1'>Back</p>
+                <p className='bg-white rounded-full px-4 py-1'>Lats</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Traps</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Abs</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Quads</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Hams</p>
+                <p className='bg-gray-700 text-white rounded-full px-4 py-1'>Calfs</p>
             </div>
 
             <div className='flex flex-row mt-2'>

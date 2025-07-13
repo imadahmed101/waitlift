@@ -101,119 +101,119 @@
     {
         "name": "bench press",
         "category": "excercise",
-        "image": "bench-press.png",
+        "image": "/images/bench-press.png",
         "split": "push",
         "parts": "chest, shoulder, tricep"
     },
     {
         "name": "push up",
         "category": "excercise",
-        "image": "pushup.png",
+        "image": "/images/pushups.png",
         "split": "push",
         "parts": "chest, shoulder, tricep"
     },
     {
         "name": "squat",
         "category": "excercise",
-        "image": "squat.png",
+        "image": "/images/squats.png",
         "split": "legs",
         "parts": "quads, hams, glutes"
     },
     {
         "name": "over head press",
         "category": "excercise",
-        "image": "arm.png",
+        "image": "/images/arm.png",
         "split": "push",
         "parts": "chest, shoulder, tricep"
     },
     {
         "name": "pull up",
         "category": "excercise",
-        "image": "pullups.png",
+        "image": "/images/pullups.png",
         "split": "pull",
         "parts": "back, biceps"
     },
     {
         "name": "chin up",
         "category": "excercise",
-        "image": "pullups.png",
+        "image": "/images/pullups.png",
         "split": "pull",
         "parts": "back, biceps"
     },
     {
         "name": "lunges",
         "category": "excercise",
-        "image": "stretching.png",
+        "image": "/images/stretching.png",
         "split": "legs",
         "parts": "quads, hams, glutes"
     },
     {
         "name": "calf raise",
         "category": "excercise",
-        "image": "arms.png",
+        "image": "/images/squats.png",
         "split": "legs",
         "parts": "calves"
     },
     {
         "name": "bicep curl",
         "category": "excercise",
-        "image": "arms.png",
+        "image": "/images/arm.png",
         "split": "pull",
         "parts": "biceps"
     },
     {
         "name": "hammer curl",
         "category": "excercise",
-        "image": "arms.png",
+        "image": "/images/arm.png",
         "split": "pull",
         "parts": "brachioraddialis"
     },
     {
         "name": "tricep extension",
         "category": "excercise",
-        "image": "triceps.png",
+        "image": "/images/triceps.png",
         "split": "push",
         "parts": "triceps"
     },
     {
         "name": "skull crushers",
         "category": "excercise",
-        "image": "arms.png",
+        "image": "/images/arm.png",
         "split": "push",
         "parts": "triceps"
     },
     {
         "name": "incline bench press",
         "category": "excercise",
-        "image": "incline.png",
+        "image": "/images/incline.png",
         "split": "push",
         "parts": "chest, shoulder, tricep"
     },
     {
         "name": "lateral raise",
         "category": "excercise",
-        "image": "arms.png",
+        "image": "/images/arm.png",
         "split": "push",
         "parts": "shoulders"
     },
     {
         "name": "shrugs",
         "category": "excercise",
-        "image": "traps.png",
+        "image": "/images/traps.png",
         "split": "pull",
         "parts": "traps"
     },
     {
         "name": "inverted row",
         "category": "excercise",
-        "image": "row.png",
+        "image": "/images/row.png",
         "split": "pull",
         "parts": "back, biceps"
     },
     {
         "name": "reverse curl",
         "category": "excercise",
-        "image": "arms.png",
+        "image": "/images/arm.png",
         "split": "pull",
         "parts": "biceps, forearms"
     }
