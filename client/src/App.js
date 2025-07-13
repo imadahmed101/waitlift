@@ -6,7 +6,6 @@ import Freestyle from './pages/Freestyle/Freestyle'
 import Planned from './pages/Planned/Planned'
 import Randomizer from './pages/Randomizer/Randomizer'
 import Error from './pages/Error'
-import './App.css';
 import Navbar from './components/Navbar';
 
 function App() {

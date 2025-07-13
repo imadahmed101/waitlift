@@ -1,11 +1,8 @@
 import React from 'react'
-import Select from './Select'
 import { useLocation, Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 
 const exercises = ['Bench Press', 'Overhead Press', 'Lateral Raise', 'Skull Crushers', 'Pull-ups', 'Inverted Rows', 'Bicep Curls', 'Squats', 'Lunges', 'Hamstring Curls', 'Quad Extensions'];
-
-
 
 const Workout = () => {
   const location = useLocation()
@@ -191,7 +188,7 @@ const Workout = () => {
           </table>
 
           {showPicker && (
-            <div className="bg-gray-300 p-2 my-4">
+            <div className="p-2 my-4">
               <h3 className="text-left font-bold">Choose Next Exercise</h3>
               {exercises.map((name, i) => (
                 <button key={i} onClick={() => handleExerciseSelect(name)} className="bg-white text-black p-2 m-2 rounded">
@@ -226,17 +223,6 @@ const Workout = () => {
         </div>
       }
 
-      {/* {!startingExercise && !end &&
-      <div className="bg-gray-300 p-2 my-4">
-              <h3 className="text-left font-bold">Choose Starting Exercise</h3>
-              {exercises.map((name, i) => (
-                <button key={i} onClick={() => handleExerciseSelect({startingExercise: name})} className="bg-white text-black p-2 m-2 rounded">
-                  {name}
-                </button>
-              ))}
-            </div> 
-      } */}
-
       {end &&
         <div className="py-24 text-center">
           <h2 className="text-4xl font-semibold mb-4">Workout Complete</h2>
@@ -264,144 +250,6 @@ const Workout = () => {
           </div>
         </div>
       }
-
-      {/* {end ? (<div className="py-24 text-center">
-        <h2 className="text-4xl font-semibold mb-4">Workout Complete</h2>
-        <p className="text-xl text-gray-600 mb-8">Total Time: {finalTime}</p>
-
-        <div className="text-left text-sm mt-8 bg-blue-400 p-4 rounded">
-          <div className='flex justify-between'>
-
-            <h3 className="font-bold text-2xl mb-2">Workout Log</h3>
-            <p>Total Time: {finalTime}</p>
-          </div>
-          <ul>
-            {workoutLog
-              .map((entry, i) => (
-                <li key={i} className="mb-2">
-                  <strong>{entry.exercise}</strong>
-                  <ul className="ml-4 list-disc">
-                    {entry.sets.map((set, j) => (
-                      <li key={j}>Set {j + 1}: {set.weight} lbs × {set.reps} reps</li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-          </ul>
-        </div>
-      </div>
-
-      )
-
-        : !startingExercise ? (
-          <div className="py-24 text-center">
-            <h2 className="text-4xl font-semibold mb-4">Workout</h2>
-            <p className="text-xl text-gray-400 mb-8">Select starting excerise to begin workout</p>
-            <div className=" p-2 mb-4 ">
-              {exercises.map((name, i) => (
-                <button
-                  key={i}
-                  onClick={() => setExercise(name)}
-                  className={`p-2 m-2 rounded ${exercise === name ? 'bg-gray-700 text-white' : 'bg-white text-gray-700'
-                    }`}>
-                  {name}
-                </button>
-              ))}
-            </div>
-            <button onClick={startWorkout} className="bg-green-500 text-xl text-white p-4 rounded-md">
-              Start Workout
-            </button>
-          </div>
-        )
-
-          : (
-            <div className="py-24 text-center">
-              <h2 className="text-4xl font-semibold mb-4">Workout in progress</h2>
-              <p className="text-xl text-gray-400 mb-8">Time: {timeFormatted}</p>
-              <p className="text-2xl font-medium mb-4">{exercise}</p>
-
-              <table className='bg-gray-900 rounded'>
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Set</th>
-                    <th>Weight</th>
-                    <th>Reps</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-
-
-                <tbody className='bg-gray-800'>
-                  {setData.map((set, i) => (
-                    <tr key={i}>
-                      <td className="p-4">
-
-                        <button onClick={() => removeSet(i)} className="text-red-500 p-2 rounded">x</button>
-                      </td>
-                      <td className="p-4">
-                        {i + 1}
-
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          value={set.weight}
-                          onChange={(e) => updateSetData(i, 'weight', e.target.value)}
-                          className=" w-[100px] md:w-full text-right text-black p-1"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          value={set.reps}
-                          onChange={(e) => updateSetData(i, 'reps', e.target.value)}
-                          className="w-[100px] md:w-full text-right text-black p-1"
-                        />
-                      </td>
-                      <td className="p-2">
-                        <button onClick={addSet} className="bg-green-500 p-2 px-4 rounded mr-1">+</button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-
-              {showPicker && (
-                <div className="bg-gray-300 p-2 my-4">
-                  <h3 className="text-left font-bold">Choose Next Exercise</h3>
-                  {exercises.map((name, i) => (
-                    <button key={i} onClick={() => handleExerciseSelect(name)} className="bg-white text-black p-2 m-2 rounded">
-                      {name}
-                    </button>
-                  ))}
-                </div>
-              )}
-
-              <div className='flex flex-row gap-2 my-2 mt-32 text-center'>
-                <div onClick={handleEndWorkout} className='flex-1 p-4 bg-red-400 rounded text-white'>Stop</div>
-                <div onClick={handleViewExcercises} className='flex-1 p-4 bg-purple-400 rounded text-white'>Excercises</div>
-                <div onClick={handleViewLog} className='flex-1 p-4 bg-blue-400 rounded text-white'>Logs</div>
-                <div onClick={handleNextExercise} className='flex-1 p-4 bg-green-500 rounded text-white'>Next</div>
-              </div>
-
-              {viewLog && <div className="text-left text-sm mt-8  p-4 rounded">
-                <h3 className="font-bold mb-2">Workout Log</h3>
-                <ul>
-                  {workoutLog.map((entry, i) => (
-                    <li key={i} className="mb-2">
-                      <strong>{entry.exercise}</strong>
-                      <ul className="ml-4 list-disc">
-                        {entry.sets.map((set, j) => (
-                          <li key={j}>Set {j + 1}: {set.weight} lbs × {set.reps} reps</li>
-                        ))}
-                      </ul>
-                    </li>
-                  ))}
-                </ul>
-              </div>}
-            </div>
-          )} */}
     </div>
   )
 }

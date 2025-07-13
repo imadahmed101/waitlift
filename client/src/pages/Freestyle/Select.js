@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Workout from './Workout'
 import db from '../../db.json'
 
 const Select = () => {
@@ -36,12 +35,11 @@ const Select = () => {
             .filter(entry => entry.category.includes('excercise'))
             .map((entry, i) => (
               <p key={i} onClick={() => handleSelect(entry.name)} className={`p-2 bg-gray-700 hover:bg-gray-800 inline-flex justify-between ${selectExercise === entry.name ? 'bg-gray-800 text-white' : 'bg-gray-700 text-white'}`}>{entry.name}
-              <div className='inline-flex gap-2'>
+                <div className='inline-flex gap-2'>
 
-              {selectExercise === entry.name && <Link to='/workout' state={{startingExercise: entry.name}} className='bg-black px-4 rounded'>Start</Link>}
-              {/* {selectExercise === entry.name && <button className='bg-black px-4 rounded'>Start</button>} */}
-                <img src={entry.image} className={`w-6 ${selectExercise === entry.name ? 'bg-green-400 rounded-full' : ''}`} />
-              </div>
+                  {selectExercise === entry.name && <Link to='/workout' state={{ startingExercise: entry.name }} className='bg-black px-4 rounded'>Start</Link>}
+                  <img src={entry.image} className={`w-6 ${selectExercise === entry.name ? 'bg-green-400 rounded-full' : ''}`} />
+                </div>
               </p>
             ))}
         </div>
