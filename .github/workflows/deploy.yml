@@ -1,0 +1,39 @@
+name: Build and Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18  # use your node version
+
+    - name: Install dependencies
+      working-directory: ./client
+      run: npm install
+
+    - name: Build app
+      working-directory: ./client
+      run: npm run build
+
+    - name: Copy files to VPS
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+
+        ssh-keyscan 69.62.71.214 >> ~/.ssh/known_hosts
+        
+        scp -r ./dist/* deploy@y69.62.71.214:/home/syedimadahmed-waitlift/htdocs/waitlift.syedimadahmed.com
