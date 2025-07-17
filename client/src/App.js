@@ -1,12 +1,12 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Navbar from './components/Navbar';
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
-import Workout from './pages/Workout/Workout'
 import Freestyle from './pages/Freestyle/Freestyle'
 import Planned from './pages/Planned/Planned'
 import Randomizer from './pages/Randomizer/Randomizer'
+import Workout from './pages/Workout/Workout'
 import Error from './pages/Error'
-import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -16,10 +16,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/workout' element={<Workout/>}/>
-        <Route path='/planned' element={<Planned/>}/>
         <Route path='/freestyle' element={<Freestyle/>}/>
+        <Route path='/planned' element={<Planned/>}/>
         <Route path='/randomizer' element={<Randomizer/>}/>
+        <Route path='/workout' element={<Workout/>}/>
         <Route path='/*' element={<Error/>}/>
       </Routes>
       </BrowserRouter>

@@ -14,6 +14,7 @@ Randomizer page make options for each muscle be multi-selectable to build random
 each muscle can give 2 workouts
 if more than 5 workouts then its just one workout given per excercise
 ---------------
+DONE (For freestyle you can select first exercise and start workout)
 Page: freestyle and maybe others
 Freestyle page make a dock at bottom to show currently selected workout (icons, and hover over for name) to have multi selectable excercises when freestyling.
 position (in workout): 1-last
@@ -22,12 +23,15 @@ Page: workout
 workout tracker page after first set and after first excercise is done ask user to sign in to save progress, at end of workout have button to save by logging in or email options.
 login to save, email updates.
 ---------------
+DONE
 Page: workout
 workout tracker page make consolidate algorithm for workout tracker and ui/ux from the other workout tracker(this one)
 ---------------
+DONE
 Page: Deploy
 Deploy a ci/cd pipeline to automatically upload new changes of app to server
 ---------------
+DONE
 Page: github
 Save and update all github files after consolidation and start a 1.0 
 ---------------

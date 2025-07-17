@@ -16,3 +16,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 0.2px black;
+    color: white;
+  }
+}
